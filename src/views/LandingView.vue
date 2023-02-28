@@ -3,30 +3,41 @@
 
 
     <main>
-        <div class="relative px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-                <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-                    <div
-                        class="relative rounded-full py-1 px-3 text-sm leading-6 text-gray-100 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                        Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span
-                                class="absolute inset-0" aria-hidden="true"></span>Read more <span
-                                aria-hidden="true">&rarr;</span></a>
+        <div class="flex flex-row">
+            <div class="relative basis-2/3 px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                    <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                        <div
+                            class="relative rounded-full py-1 px-3 text-sm leading-6 text-gray-100 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                            Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span
+                                    class="absolute inset-0" aria-hidden="true"></span>Read more <span
+                                    aria-hidden="true">&rarr;</span></a>
+                        </div>
                     </div>
-                </div>
-                <div class="text-center">
-                    <h1 class="text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl">¡Hola! Soy Felipe Trujillo
-                        Full-Stack Web Developer</h1>
-                    <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                        irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-                    <div class="mt-10 flex items-center justify-center gap-x-6">
-                        <a href="#"
-                            class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
-                            started</a>
-                        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span
-                                aria-hidden="true">→</span></a>
+                    <div class="text-center">
+                        <h1 class="text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl">{{ landing.title }}</h1>
+                        <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt.
+                            Qui
+                            irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+                        <div class="mt-10 flex items-center justify-center gap-x-6">
+                            <a href="#"
+                                class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
+                                started</a>
+                            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span
+                                    aria-hidden="true">→</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="basis-1/3  px-6 lg:px-8">
+
+                <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                    <img src="https://images.pexels.com/photos/14612871/pexels-photo-14612871.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+                
+                </div>
+            </div>
+        </div>
+        <div class="mx-10 relative">
             <div
                 class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
                 <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
@@ -46,16 +57,14 @@
     </main>
 
 
-    <Card />
+    <!--   <Card />
     <div class="w-100 bg-gray-800 h-24">
 
         Test
     </div>
     <div>
         <button class="rounded-md bg-purple-900 text-white p-3 font-sans font-medium text-sm">Contáctame</button>
-    </div>
-
-
+    </div> -->
 
     <div class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -98,13 +107,25 @@
                 </article>
 
                 <!-- More posts... -->
+            </div>
         </div>
     </div>
-</div></template>
+</template>
 
 <script setup lang="ts">
 import Navbar from '@/components/Navbar.vue';
 import Card from '@/components/Card.vue';
+import { ref } from 'vue';
+
+const landing = ref({
+    title: '¡Hola! Soy Felipe Trujillo Full-Stack Web Developer'
+})
+
+const changeText = () => {
+    landing.value.title = 'hola'
+}
+
+let intervaloDispositivos = setInterval(changeText, 10000);
 
 
 </script>

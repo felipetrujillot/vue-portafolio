@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="fixed top-0 left-0 right-0 bg-black z-10">
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
@@ -20,8 +20,8 @@
                 </button>
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
-                <a href="#" class="text-sm font-semibold leading-6 text-white">Features</a>
-                <a href="#" class="text-sm font-semibold leading-6 text-white">Marketplace</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Inicio</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Proyectos</a>
                 <a href="#" class="text-sm font-semibold leading-6 text-white">Utilidades</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
