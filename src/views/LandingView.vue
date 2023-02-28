@@ -1,17 +1,110 @@
 <template>
-<Navbar/>
+    <Navbar />
 
-<div class="w-100 bg-gray-800 h-24">
 
-    Test
-</div>
-<div>
-    <button class="rounded-md bg-purple-900 text-white p-3 font-sans font-medium text-sm">Contáctame</button>
-</div>
-</template>
+    <main>
+        <div class="relative px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                    <div
+                        class="relative rounded-full py-1 px-3 text-sm leading-6 text-gray-100 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                        Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span
+                                class="absolute inset-0" aria-hidden="true"></span>Read more <span
+                                aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl">¡Hola! Soy Felipe Trujillo
+                        Full-Stack Web Developer</h1>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui
+                        irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <a href="#"
+                            class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
+                            started</a>
+                        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span
+                                aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+                <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
+                    viewBox="0 0 1155 678">
+                    <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3"
+                        d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+                    <defs>
+                        <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177"
+                            y2="474.645" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#9089FC" />
+                            <stop offset="1" stop-color="#FF80B5" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </main>
+
+
+    <Card />
+    <div class="w-100 bg-gray-800 h-24">
+
+        Test
+    </div>
+    <div>
+        <button class="rounded-md bg-purple-900 text-white p-3 font-sans font-medium text-sm">Contáctame</button>
+    </div>
+
+
+
+    <div class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:mx-0">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
+                <p class="mt-2 text-lg leading-8 text-gray-600">Learn how to grow your business with our expert advice.</p>
+            </div>
+            <div
+                class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                <article class="flex max-w-xl flex-col items-start justify-between">
+                    <div class="flex items-center gap-x-4 text-xs">
+                        <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
+                        <a href="#"
+                            class="relative z-10 rounded-full bg-gray-50 py-1.5 px-3 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
+                    </div>
+                    <div class="group relative">
+                        <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                            <a href="#">
+                                <span class="absolute inset-0"></span>
+                                Boost your conversion rate
+                            </a>
+                        </h3>
+                        <p class="mt-5 text-sm leading-6 text-gray-600 line-clamp-3">Illo sint voluptas. Error voluptates
+                            culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed
+                            exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
+                    </div>
+                    <div class="relative mt-8 flex items-center gap-x-4">
+                        <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                            alt="" class="h-10 w-10 rounded-full bg-gray-50">
+                        <div class="text-sm leading-6">
+                            <p class="font-semibold text-gray-900">
+                                <a href="#">
+                                    <span class="absolute inset-0"></span>
+                                    Michael Foster
+                                </a>
+                            </p>
+                            <p class="text-gray-600">Co-Founder / CTO</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- More posts... -->
+        </div>
+    </div>
+</div></template>
 
 <script setup lang="ts">
 import Navbar from '@/components/Navbar.vue';
+import Card from '@/components/Card.vue';
 
 
 </script>
