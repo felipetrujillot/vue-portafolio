@@ -125,7 +125,7 @@
 
 <script setup lang="ts">
 import Navbar from '@/components/Navbar.vue';
-import { reactive } from 'vue';
+import { reactive, onUnmounted } from 'vue';
 
 const textos = reactive({
     0: 'Full-Stack Web Developer',
@@ -173,8 +173,9 @@ const loopChangeText = () => {
     return
 }
 
-setInterval(() => {
+const intervaloLoop = setInterval(() => {
     loopChangeText()
 }, 300 - Math.random() * 100)
 
+onUnmounted(() => clearInterval(intervaloLoop))
 </script>
