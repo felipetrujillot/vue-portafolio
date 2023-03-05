@@ -3,19 +3,28 @@
 
 
     <main>
-        <div class="flex flex-row">
-            <div class="relative basis-2/3 px-6 lg:px-8">
-                <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-                    <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-                        <div
+
+        <div class="grid md:grid-cols-7 sm:grid-cols-1 py-20 gap-4 h-100 md:mx-20 sm:mx-10">
+            <div class="col-span-4 px-6 lg:px-8  ">
+                <div class="py-32 sm:py-48 lg:py-56">
+                    <div class="hidden sm:mb-8 sm:flex sm:justify-start">
+                        <div>
+                            <p class="text-2xl font-bold text-gray-200 leading-6 ring-2 p-3 ring-red-500">¡Bienvenido!
+                            </p>
+                        </div>
+                        <!-- <div
                             class="relative rounded-full py-1 px-3 text-sm leading-6 text-gray-100 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                            Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span
+                            Bienvenido a mi portafolio. <a href="#" class="font-semibold text-indigo-600"><span
                                     class="absolute inset-0" aria-hidden="true"></span>Read more <span
                                     aria-hidden="true">&rarr;</span></a>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="text-center">
-                        <h1 class="text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl">{{ landing.title }}</h1>
+                    <div class="text-start">
+                        <h1 class="text-5xl font-bold tracking-tight text-gray-100 sm:text-7xl">{{ landing.title }}
+                            <span class="border-r-4 pr-2 text-red-500">
+                                {{ landing.role }}
+                            </span>
+                        </h1>
                         <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt.
                             Qui
                             irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
@@ -29,14 +38,16 @@
                     </div>
                 </div>
             </div>
-            <div class="basis-1/3  px-6 lg:px-8">
+            <div class="text-white col-span-3 px-6 lg:px-8 justify-start">
+                <div class="max-w-2xl py-32 sm:py-48 lg:py-56">
+                    <img
+                        src="https://images.pexels.com/photos/14612871/pexels-photo-14612871.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
 
-                <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-                    <img src="https://images.pexels.com/photos/14612871/pexels-photo-14612871.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
-                
                 </div>
             </div>
         </div>
+
+
         <div class="mx-10 relative">
             <div
                 class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
@@ -114,18 +125,56 @@
 
 <script setup lang="ts">
 import Navbar from '@/components/Navbar.vue';
-import Card from '@/components/Card.vue';
-import { ref } from 'vue';
+import { reactive } from 'vue';
 
-const landing = ref({
-    title: '¡Hola! Soy Felipe Trujillo Full-Stack Web Developer'
+const textos = reactive({
+    0: 'Full-Stack Web Developer',
+    1: 'Full-Stack Mobile Developer',
+    2: 'UI/UX Designer',
+})
+const landing: {
+    title: string,
+    role: string,
+} = reactive({
+    title: 'Soy Felipe Trujillo ',
+    role: 'Full-Stack Web Developer'
 })
 
-const changeText = () => {
-    landing.value.title = 'hola'
+type Numeros = {
+    0: number,
+    1: number,
+    2: number,
 }
 
-let intervaloDispositivos = setInterval(changeText, 10000);
+const textStatus: {
+    completed: boolean,
+    selected: number
+} = reactive({
+    completed: true,
+    selected: 0,
+})
 
+/**
+ * Cambia el texto de manera dinámica
+ * @author FT
+ */
+const loopChangeText = () => {
+
+    if (textStatus.completed == true) {
+        landing.role = landing.role.substring(0, landing.role.length - 1)
+        if (landing.role.length > 0) return
+        textStatus.selected = textStatus.selected + 1
+        if (textStatus.selected >= Object.keys(textos).length) textStatus.selected = 0
+        textStatus.completed = false;
+        return
+    }
+    landing.role = textos[textStatus.selected as keyof Numeros].substring(0, landing.role.length + 1)
+    if (landing.role === textos[textStatus.selected as keyof Numeros]) textStatus.completed = true
+    return
+}
+
+setInterval(() => {
+    loopChangeText()
+}, 300 - Math.random() * 100)
 
 </script>
