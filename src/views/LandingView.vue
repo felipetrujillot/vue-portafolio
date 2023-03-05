@@ -171,11 +171,8 @@
 import Navbar from '@/components/Navbar.vue';
 import { reactive, onUnmounted } from 'vue';
 
-const textos = reactive({
-    0: 'Full-Stack Web Developer',
-    1: 'Full-Stack Mobile Developer',
-    2: 'UI/UX Designer',
-})
+const textos = ['Full-Stack Web Developer', 'Full-Stack Mobile Developer', 'UI/UX Designer']
+
 const landing: {
     title: string,
     role: string,
