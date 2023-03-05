@@ -1,12 +1,12 @@
 <template>
-    <header class="fixed top-0 left-0 right-0 bg-black z-10">
+    <header class="fixed top-0 left-0 right-0 dark:bg-black z-10 bg-gray-100">
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
                     <span class="sr-only">Your Company</span>
                     <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
                 </a>
-                <a href="#" class="text-sm font-semibold leading-6 pt-1 pl-2 text-white">FTT</a>
+                <a href="#" class="text-2xl font-semibold leading-6 pt-1 pl-2 dark:text-white text-gray-900">FTT</a>
 
             </div>
             <div class="flex lg:hidden">
@@ -20,13 +20,41 @@
                 </button>
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
-                <a href="#" class="text-sm font-semibold leading-6 text-white">Inicio</a>
-                <a href="#" class="text-sm font-semibold leading-6 text-white">Proyectos</a>
-                <a href="#" class="text-sm font-semibold leading-6 text-white">Utilidades</a>
+                <a href="#" class="text-md font-semibold leading-6 dark:text-white text-gray-900">Inicio</a>
+                <a href="#" class="text-md font-semibold leading-6 dark:text-white text-gray-900">Proyectos</a>
+                <a href="#" class="text-md font-semibold leading-6 dark:text-white text-gray-900">Utilidades</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#" class="text-sm font-semibold leading-6 text-white">Log in <span
-                        aria-hidden="true">&rarr;</span></a>
+                <div class="flex row dark:text-gray-200 text-gray-900 gap-4 justify-start">
+                    <div>
+                        <a target="_blank" href="https://github.com/felipetrujillot" class="text-2xl">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a target="_blank" href="https://www.instagram.com/felipe.itt/" class="text-2xl">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="text-2xl">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                    </div>
+                    <div @click="updateTheme()" class="border-gray-400 border-l-2 pl-2">
+                         <a href="#" class="text-xl"  v-if="theme.darkMode">
+                            <i class="bi bi-moon"></i>
+                        </a>
+                        <a href="#" class="text-2xl" v-else>
+                            <i class="bi bi-brightness-high"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--  <a href="#" class="text-md font-semibold leading-6 text-white">Log in <span
+                        aria-hidden="true">&rarr;</span></a> -->
             </div>
         </nav>
         <!-- Mobile menu, show/hide based on menu open state. -->
@@ -52,3 +80,16 @@
         </div> -->
     </header>
 </template>
+
+<script setup lang="ts">
+import { reactive } from 'vue'
+
+const theme: { darkMode: boolean } = reactive({
+    darkMode: window.matchMedia('(prefers-color-scheme: dark)').matches ?? true
+})
+
+const updateTheme = () => {
+    theme.darkMode = !theme.darkMode
+    theme.darkMode == true ? document.getElementsByTagName('html')[0].classList.add('dark') : document.getElementsByTagName('html')[0].classList.remove('dark')
+}
+</script>

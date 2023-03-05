@@ -1,54 +1,56 @@
 <template>
     <Navbar />
-
-
     <main>
-
-        <div class="grid md:grid-cols-7 sm:grid-cols-1 py-20 gap-4 h-100 md:mx-20 sm:mx-10">
-            <div class="col-span-4 px-6 lg:px-8">
-                <div class="py-32 sm:py-48 lg:py-56">
-                    <div class="hidden sm:mb-8 sm:flex sm:justify-start">
-                        <div>
-                            <p class="text-2xl font-bold text-gray-200 leading-6 ring-2 p-3 ring-red-500">¡Bienvenido!
-                            </p>
+        <div class="bg-white dark:bg-black">
+            <div class="grid md:grid-cols-7 sm:grid-cols-1 py-20 gap-4 h-100 md:mx-20 sm:mx-10">
+                <div class="col-span-4 px-6 lg:px-8">
+                    <div class="py-32 sm:py-48 lg:py-56">
+                        <div class="hidden sm:mb-8 sm:flex sm:justify-start">
+                            <div>
+                                <p class="text-2xl font-bold dark:text-gray-200 text-gray-600 leading-6 ring-2 p-3 ring-red-500">¡Bienvenido!
+                                </p>
+                            </div>
+                            <!-- <div
+                                class="relative rounded-full py-1 px-3 text-sm leading-6 text-gray-100 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                                Bienvenido a mi portafolio. <a href="#" class="font-semibold text-indigo-600"><span
+                                        class="absolute inset-0" aria-hidden="true"></span>Read more <span
+                                        aria-hidden="true">&rarr;</span></a>
+                            </div> -->
                         </div>
-                        <!-- <div
-                            class="relative rounded-full py-1 px-3 text-sm leading-6 text-gray-100 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                            Bienvenido a mi portafolio. <a href="#" class="font-semibold text-indigo-600"><span
-                                    class="absolute inset-0" aria-hidden="true"></span>Read more <span
-                                    aria-hidden="true">&rarr;</span></a>
-                        </div> -->
-                    </div>
-                    <div class="text-start">
-                        <h1 class="text-5xl font-bold tracking-tight text-gray-100 sm:text-7xl">{{ landing.title }}
-                            <span class="border-r-4 pr-2 text-red-500">
-                                {{ landing.role }}
-                            </span>
-                        </h1>
-                        <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt.
-                            Qui
-                            irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-                        
-                        </p>
-                        <div class="mt-10 flex items-center justify-center gap-x-6">
-                            <a href="#"
-                                class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
-                                started</a>
-                            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span
-                                    aria-hidden="true">→</span></a>
+                        <div class="text-start">
+                            <h1 class="text-5xl font-bold tracking-tight dark:text-gray-100 text-gray-900 sm:text-7xl">{{ landing.title }}
+                                <span class="border-r-4 pr-2 text-red-500">
+                                    {{ landing.role }}
+                                </span>
+                            </h1>
+    
+                            <p class="mt-6 text-lg leading-8 text-gray-600">
+                                Anim aute id magna aliqua ad ad non deserunt sunt.
+                                Qui
+                                irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+    
+                            </p>
+                            <div class="mt-10 flex items-center justify-start gap-x-6">
+                                <a href="#"
+                                    class="rounded-md bg-red-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
+                                    started</a>
+                                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span
+                                        aria-hidden="true">→</span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="text-white col-span-3 px-6 lg:px-8 justify-start">
-                <div class="max-w-2xl py-32 sm:py-48 lg:py-56">
-                    <img
-                        src="https://images.pexels.com/photos/14612871/pexels-photo-14612871.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-
+                <div class="text-white col-span-3 px-6 lg:px-8 justify-start">
+                    <div class="max-w-2xl py-32 sm:py-48 lg:py-56">
+                        <img
+                            src="https://images.pexels.com/photos/14612871/pexels-photo-14612871.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+    
+                    </div>
                 </div>
             </div>
         </div>
-        <div
+
+        <!-- <div
             class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
             <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
                 viewBox="0 0 1155 678">
@@ -62,14 +64,18 @@
                     </linearGradient>
                 </defs>
             </svg>
-        </div>
+        </div> -->
     </main>
 
 
     <div class="bg-gray-900 text-gray-400 flex flex-row justify-between gap-4 py-10 px-20">
         <div class="row">
             <p>Vue
-                <svg class="logo" viewBox="0 0 128 128" width="24" height="24" data-v-01fe52ea=""><path fill="#42b883" d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z" data-v-01fe52ea=""></path><path fill="#35495e" d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z" data-v-01fe52ea=""></path></svg>
+                <svg class="logo" viewBox="0 0 128 128" width="24" height="24" data-v-01fe52ea="">
+                    <path fill="#42b883" d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z"
+                        data-v-01fe52ea=""></path>
+                    <path fill="#35495e" d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z" data-v-01fe52ea=""></path>
+                </svg>
             </p>
         </div>
         <div class="">Typescript</div>
@@ -89,6 +95,31 @@
             </div>
         </div>
     </div>
+    <!-- <div class="bw-black grid grid-cols-7">
+        <div class="text-white col-span-3 border rounded-sm m-10 bg-purple-900 p-10">
+
+            <code class="language-html" data-lang="html">
+                    /**
+                    * Cambia el texto de manera dinámica
+                    * @author FT
+                    */
+                    const loopChangeText = () => {
+
+                        if (textStatus.completed == true) {
+                            landing.role = landing.role.substring(0, landing.role.length - 1)
+                            if (landing.role.length > 0) return
+                            textStatus.selected = textStatus.selected + 1
+                            if (textStatus.selected >= Object.keys(textos).length) textStatus.selected = 0
+                            textStatus.completed = false;
+                            return
+                        }
+                        landing.role = textos[textStatus.selected as keyof Numeros].substring(0, landing.role.length + 1)
+                        if (landing.role === textos[textStatus.selected as keyof Numeros]) textStatus.completed = true
+                        return
+                    }
+            </code>
+        </div>
+    </div> -->
 
     <div class="py-24 sm:py-32 bg-purple-900">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
