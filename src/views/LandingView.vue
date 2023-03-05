@@ -190,10 +190,10 @@ type Numeros = {
 const textStatus: {
     completed: boolean,
     selected: number
-} = reactive({
+} = {
     completed: true,
     selected: 0,
-})
+}
 
 /**
  * Cambia el texto de manera dinámica
