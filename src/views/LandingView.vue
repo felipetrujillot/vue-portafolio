@@ -5,7 +5,7 @@
     <main>
 
         <div class="grid md:grid-cols-7 sm:grid-cols-1 py-20 gap-4 h-100 md:mx-20 sm:mx-10">
-            <div class="col-span-4 px-6 lg:px-8  ">
+            <div class="col-span-4 px-6 lg:px-8">
                 <div class="py-32 sm:py-48 lg:py-56">
                     <div class="hidden sm:mb-8 sm:flex sm:justify-start">
                         <div>
@@ -27,7 +27,9 @@
                         </h1>
                         <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt.
                             Qui
-                            irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+                            irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                        
+                        </p>
                         <div class="mt-10 flex items-center justify-center gap-x-6">
                             <a href="#"
                                 class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
@@ -46,38 +48,49 @@
                 </div>
             </div>
         </div>
-
-
-        <div class="mx-10 relative">
-            <div
-                class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-                <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
-                    viewBox="0 0 1155 678">
-                    <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3"
-                        d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
-                    <defs>
-                        <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177"
-                            y2="474.645" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#9089FC" />
-                            <stop offset="1" stop-color="#FF80B5" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
+        <div
+            class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+            <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
+                viewBox="0 0 1155 678">
+                <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3"
+                    d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
+                <defs>
+                    <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49" x2="-78.208" y1=".177"
+                        y2="474.645" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#9089FC" />
+                        <stop offset="1" stop-color="#FF80B5" />
+                    </linearGradient>
+                </defs>
+            </svg>
         </div>
     </main>
 
 
-    <!--   <Card />
-    <div class="w-100 bg-gray-800 h-24">
+    <div class="bg-gray-900 text-gray-400 flex flex-row justify-between gap-4 py-10 px-20">
+        <div class="row">
+            <p>Vue
+                <svg class="logo" viewBox="0 0 128 128" width="24" height="24" data-v-01fe52ea=""><path fill="#42b883" d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z" data-v-01fe52ea=""></path><path fill="#35495e" d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z" data-v-01fe52ea=""></path></svg>
+            </p>
+        </div>
+        <div class="">Typescript</div>
+        <div class="flex flex-row">
+            <div>
+            </div>
+            <div>
+                <a href="#" class="flex flex-row">
 
-        Test
+                    <span class="h-8 pt-1 pr-2">
+
+                        Tailwind
+                    </span>
+
+                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white&white=600" alt="">
+                </a>
+            </div>
+        </div>
     </div>
-    <div>
-        <button class="rounded-md bg-purple-900 text-white p-3 font-sans font-medium text-sm">Contáctame</button>
-    </div> -->
 
-    <div class="bg-white py-24 sm:py-32">
+    <div class="py-24 sm:py-32 bg-purple-900">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0">
                 <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
